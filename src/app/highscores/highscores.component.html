@@ -1,0 +1,16 @@
+<div class="highscore-container">
+    <div class="highscore-title">
+        <div class="title">Highscores</div>
+    </div>
+    <div class="highscore-list">
+        <ul>
+            <li *ngFor="let highscore of highscores">
+                <div>
+                    <span>{{highscore.completionDate | date: 'shortDate'}}</span>
+                    <span>{{highscore.steps}} steps</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div *ngIf="loading" class="loader">Loading...</div>
+</div>
